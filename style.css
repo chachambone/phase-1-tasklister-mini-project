@@ -2,16 +2,20 @@ html {
   height: 100%;
   width: 100%;
   font-family: "Titillium Web", sans-serif;
+  font-size: 16px;
+  /*Base font size for better readability*/
 }
 
 body {
   min-height: 100%;
   min-width: 100%;
   background: linear-gradient(pink, violet);
+  line-height: 1.5;
+  /*Improved line spacing*/
 }
 
 button {
-  font-size: 7px;
+  font-size: 14px;
 }
 
 #main-content {
@@ -34,4 +38,144 @@ button {
   padding: 15px 20px 18px 18px;
   border-radius: 5px;
   box-shadow: 2px 5px 5px #333;
+  width: 100%;/*Full width of parent*/
+}
+
+/*Form elements styling*/
+
+form label{
+  font-size: 16px;
+  margin: 10px;
+}
+
+form input,form select{
+font-size: 16px;
+padding: 5px;
+margin-right: 15px;
+margin-bottom: 10px;
+}
+
+form input[type="submit"]{
+  font-size: 16px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+/*Task styling*/
+
+#tasks li{
+margin: 15px;
+display: flex;
+align-items: center;
+font-size: 16px;
+padding: 10px;
+background: rgba(255, 255, 255, 0.5);
+border-radius: 5px;
+}
+
+.task-content{
+  flex-grow: 1;
+  font-size: 16px;
+}
+
+.delete-btn,.edit-btn,.sort-btn{
+  font-size: 14px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.priority-high,.priority-medium,.priority-low{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.due-date{
+  font-style: italic;
+  margin-left: 10px;
+  color: #333;
+  font-size: 20px;
+}
+
+/*Headings*/
+h1{
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+h2{
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.delete-btn:hover{
+  background-color: #ff0000;
+}
+
+#task li{
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+/*Priority based colors*/
+.priority-high{
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.priority-medium{
+  color: #ffa500;
+  font-weight: bold;
+}
+
+.priority-low{
+  color: #008000;
+  font-weight: bold;
+}
+
+/*Sorting controls*/
+.sort-controls{
+  margin: 10px 0;
+  display: flex;
+  gap: 10px;
+}
+.sort-btn{
+  background-color: #4d79ff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.sort-btn:hover{
+  background-color: #0044cc;
+}
+
+.task-content{
+  flex-grow: 1;
+}
+
+.button-container{
+  display: flex;
+  gap: 5px;
+}
+
+.edit-btn{
+  background-color: #4d79ff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.edit-btn:hover{
+  background-color: #0044cc;
+}
+
+.due-date{
+  font-style: italic;
+  margin-left: 10px;
+  color: #666;
 }
