@@ -1,28 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("create-task-form");
   const taskInput = document.getElementById('new-task-description');  
+  const userInput = document.getElementById('user-name');
 
   form.addEventListener("submit",(event)=>{
     event.preventDefault();
     
     const description = taskInput.value;
-    addTask(description)
+    const user = userInput.value;
+
+    addTask(description,user)
     form.reset();
 
   })
 });
 
-function addTask(description){
+function addTask(description,user){
   let tasks = [];
+  tasks.push(description)
+
   const list = document.getElementById('tasks')
   const taskItem = document.createElement("li");
 
-  taskItem.textContent = description
+  taskItem.textContent = `${description} done by -  ${user} `
+  
   deleteItem(taskItem)
-
-  tasks.push(description)
   list.appendChild(taskItem)
-
 }
 
 function deleteItem(taskItem){
